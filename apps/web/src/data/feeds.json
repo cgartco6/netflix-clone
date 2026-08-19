@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "id": "live-news",
+      "title": "Live News Feeds",
+      "items": [
+        {
+          "id": "news-1",
+          "title": "NASA TV Live Feed",
+          "type": "youtube",
+          "streamUrl": "https://www.youtube.com/embed/21X5lGlDOfg?autoplay=1",
+          "poster": "https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+        },
+        {
+          "id": "news-2",
+          "title": "Al Jazeera English Live",
+          "type": "youtube",
+          "streamUrl": "https://www.youtube.com/embed/gCNeDWCI0vo?autoplay=1",
+          "poster": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167"
+        }
+      ]
+    },
+    {
+      "id": "nature-webcams",
+      "title": "Nature & Wildlife Live",
+      "items": [
+        {
+          "id": "cam-1",
+          "title": "African Wildlife Live Cam",
+          "type": "youtube",
+          "streamUrl": "https://www.youtube.com/embed/ydYDqZQpim8?autoplay=1",
+          "poster": "https://images.unsplash.com/photo-1516426122078-c23e76319801"
+        },
+        {
+          "id": "cam-2",
+          "title": "International Space Station Cam",
+          "type": "youtube",
+          "streamUrl": "https://www.youtube.com/embed/P9C25Un7xaM?autoplay=1",
+          "poster": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa"
+        }
+      ]
+    },
+    {
+      "id": "open-video",
+      "title": "Sample Test Video Loops",
+      "items": [
+        {
+          "id": "vid-1",
+          "title": "Big Buck Bunny HD Stream",
+          "type": "direct",
+          "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          "poster": "https://images.unsplash.com/photo-1536440136628-849c177e76a1"
+        },
+        {
+          "id": "vid-2",
+          "title": "Tears of Steel 4K Trailer",
+          "type": "direct",
+          "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+          "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728"
+        }
+      ]
+    }
+  ]
+}
