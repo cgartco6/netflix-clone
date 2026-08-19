@@ -1,0 +1,56 @@
+name: Build & Validate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Shell Scripts Syntax
+        run: |
+          bash -n scripts/mount-drives.sh
+
+      - name: Validate Docker Compose Config
+        run: |
+          docker compose -f docker/docker-compose.yml config
+
+  build-cross-platform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: apps/cross-platform/package.json
+
+      - name: Install Mobile Dependencies
+        run: |
+          cd apps/cross-platform
+          npm install
+
+  build-web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: apps/web/package.json
+
+      - name: Install Web Dependencies & Build
+        run: |
+          cd apps/web
+          npm install
+          npm run build
