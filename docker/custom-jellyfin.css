@@ -1,0 +1,48 @@
+/* Netflix UI Custom Styling for Jellyfin */
+
+/* Dark Background */
+body, .backgroundContainer {
+    background-color: #141414 !important;
+}
+
+/* Red Accent for Headers & Buttons */
+.button-submit, 
+.emby-button-focusaccent,
+.navMenuOption-selected {
+    background-color: #E50914 !important;
+    color: #FFFFFF !important;
+}
+
+/* Top Navigation Bar Styling */
+.skinHeader-withBackground {
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%) !important;
+    background-color: transparent !important;
+}
+
+/* Card Hover Zoom Effect */
+.card {
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+}
+
+.card:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.8) !important;
+    z-index: 10 !important;
+}
+
+/* Card Title Typography */
+.cardText {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: 500 !important;
+    color: #E5E5E5 !important;
+}
+
+/* Section Titles */
+.sectionTitle {
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin-left: 10px !important;
+}
