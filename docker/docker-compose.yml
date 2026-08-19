@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  media-server:
+    image: jellyfin/jellyfin:latest
+    container_name: netflix_engine
+    network_mode: "host"
+    environment:
+      - JELLYFIN_PublishedServerUrl=http://localhost:8096
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      - ./custom-jellyfin.css:/jellyfin/jellyfin-web/custom.css
+      - /mnt/external_media:/data/media:ro
+    restart: unless-stopped
